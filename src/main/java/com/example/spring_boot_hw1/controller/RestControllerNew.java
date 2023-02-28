@@ -50,4 +50,9 @@ public class RestControllerNew {
 
     }
 
+    @GetMapping("/employees/name/{name}")
+    public List<Employee> getEmployeesByName(@PathVariable String name) {
+        return employeeService.getAllByName(name);
+    }
+
 }
